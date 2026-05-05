@@ -1,0 +1,6 @@
+Package: OrbitSysThreadLens
+Type: Package
+Title: OrbitSysThreadLens
+Version: 0.1.0
+License: MIT
+Description: Build an R toolkit that studies thread behavior through node-edge fixtures, with cycle and reachability reports and bounded memory input sets.
