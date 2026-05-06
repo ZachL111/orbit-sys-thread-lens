@@ -1,0 +1,17 @@
+{
+  "repo": "orbit-sys-thread-lens",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 4,
+    "ship": 156,
+    "watch": 98
+  },
+  "terms": [
+    "allocation pressure",
+    "dirty state",
+    "guard slack",
+    "layout drift"
+  ]
+}
