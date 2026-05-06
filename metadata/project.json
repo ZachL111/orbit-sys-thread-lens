@@ -1,0 +1,32 @@
+{
+  "index": 155,
+  "phase": 2,
+  "batch": 18,
+  "name": "orbit-sys-thread-lens",
+  "planned_name": "orbit-sys-thread-lens",
+  "language": "R",
+  "category": "Systems programming",
+  "goal": "Build an R toolkit that studies thread behavior through node-edge fixtures, with cycle and reachability reports and bounded memory input sets.",
+  "repository_url": "https://github.com/ZachL111/orbit-sys-thread-lens",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 167,
+    "risk_penalty": 7,
+    "latency_penalty": 3,
+    "weight_bonus": 6,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
