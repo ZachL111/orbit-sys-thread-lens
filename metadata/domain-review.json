@@ -1,0 +1,73 @@
+{
+  "repo": "orbit-sys-thread-lens",
+  "language": "R",
+  "category": "Systems programming",
+  "goal": "Build an R toolkit that studies thread behavior through node-edge fixtures, with cycle and reachability reports and bounded memory input sets.",
+  "review_model": {
+    "terms": [
+      "allocation pressure",
+      "dirty state",
+      "guard slack",
+      "layout drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "allocation pressure",
+      "signal": 45,
+      "slack": 20,
+      "drag": 14,
+      "confidence": 54,
+      "score": 122,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "dirty state",
+      "signal": 59,
+      "slack": 39,
+      "drag": 26,
+      "confidence": 72,
+      "score": 151,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "guard slack",
+      "signal": 83,
+      "slack": 40,
+      "drag": 14,
+      "confidence": 76,
+      "score": 240,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "layout drift",
+      "signal": 53,
+      "slack": 49,
+      "drag": 27,
+      "confidence": 52,
+      "score": 126,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "allocation pressure",
+      "signal": 62,
+      "slack": 54,
+      "drag": 20,
+      "confidence": 84,
+      "score": 202,
+      "lane": "ship"
+    }
+  ]
+}
